@@ -12,7 +12,7 @@ from setuptools import setup
 
 setup(
     name='to_sentry',
-    version='0.0.3',
+    version='0.0.4',
     author='Adam DePrince',
     author_email='adeprince@nypublicradio.org',
     description='Simple command line driven logging for sentry.',

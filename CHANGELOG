@@ -7,3 +7,9 @@
 0.0.3:
     * Add graceful failure in the event to_sentry cannot reach the
       Sentry server specificed in its DSN.
+
+0.0.4: 
+    * Environment variable reporting
+    * Formatting change; extra data field elements are capped at 400
+      characters.  Store each line individually as stdin.00000000,
+      stdin.00000001, ...

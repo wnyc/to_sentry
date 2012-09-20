@@ -8,11 +8,11 @@ Command line tool to dump data to sentry.
 """
 
 from setuptools import setup
-
+import to_sentry
 
 setup(
     name='to_sentry',
-    version='0.0.4',
+    version='.'.join(map(str, to_sentry.VERSION)),
     author='Adam DePrince',
     author_email='adeprince@nypublicradio.org',
     description='Simple command line driven logging for sentry.',
@@ -31,7 +31,7 @@ setup(
         'Operating System :: OS Independent',
         'Topic :: Software Development'
     ],
-    scripts = ["scripts/to_sentry",],
+    scripts = ["scripts/to_sentry", "scripts/to_sentry_needs_upgrade"],
     url = "https://github.com/adamdeprince/to_sentry",
     install_requires = [
         'raven',

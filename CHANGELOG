@@ -13,3 +13,5 @@
     * Formatting change; extra data field elements are capped at 400
       characters.  Store each line individually as stdin.00000000,
       stdin.00000001, ...
+    * to_sentry_needs_upgrade commnad for simple puppet and chef
+      deployment.

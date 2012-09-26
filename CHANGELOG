@@ -15,3 +15,12 @@
       stdin.00000001, ...
     * to_sentry_needs_upgrade commnad for simple puppet and chef
       deployment.
+
+0.0.5:
+    * Uses google gflags. 
+    * Old format (to_sentry channel message) is deprecated 
+    * Parameters for exec read from argv for easy stdout and stderr
+      capture; you can now write to_sentry --message "my message"
+      my_command -foo=bar
+    * If the command is invoked by to_sentry the return code is also
+      send to sentry as "returncode."

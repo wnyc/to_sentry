@@ -19,6 +19,7 @@ setup(
     long_description=__doc__,
     py_modules = [
         "to_sentry/config_parser",
+        "to_sentry/main",
         "to_sentry/transmitter",
         ],
     packages = ["to_sentry"],
@@ -34,6 +35,7 @@ setup(
     scripts = ["scripts/to_sentry", "scripts/to_sentry_needs_upgrade"],
     url = "https://github.com/adamdeprince/to_sentry",
     install_requires = [
+        'python-gflags',
         'raven',
         ]
 )

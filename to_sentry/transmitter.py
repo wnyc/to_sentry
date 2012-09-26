@@ -17,6 +17,8 @@ def usage():
 
 
 def format_text(handle, text):
+    if not text:
+        raise StopIteration()
     formatter = handle + ".%%0%dd" % (FLAGS.digits,)
     for x, line in enumerate(text.split('\n')):
         line = line.rstrip()
@@ -59,5 +61,5 @@ def send(channel, message, stdout, stderr=None, client_factory=raven.Client, ext
                            extra = extra)
 
 
-def send_old(argv, stdin, client_factory=raven.Client):
-    return send(argv[1], ' '.join(argv[2:]), stdin)
+def send_old(argv, stdin, client_factory=raven.Client, extra=None):
+    return send(argv[0], ' '.join(argv[1:]), stdin, extra=extra)

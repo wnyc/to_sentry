@@ -16,8 +16,8 @@ def main(argv, stdin):
       print '%s\\nUsage: %s ARGS\\n%s' % (e, sys.argv[0], FLAGS)
       return 1
     if not FLAGS.message:
-        to_sentry.transmitter.send_old(argv, stdin)
-        to_sentry.transmitter.send_old(argv, StringIO.StringIO('to_sentry warning: to_sentry <channel> <message> is deprecated.'))
+        to_sentry.transmitter.send_old(list(argv), stdin, extra={'deprecation warning': 
+                                                                 'to_sentry warning: to_sentry <channel> <message> is deprecated.'})
     elif argv:
         p = Popen(argv, stdout=PIPE, stderr=PIPE)
         stdout, stderr = p.communicate()

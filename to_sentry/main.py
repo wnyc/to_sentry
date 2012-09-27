@@ -36,7 +36,7 @@ def main(argv, stdin):
         p = Popen(argv, stdout=PIPE, stderr=PIPE)
         stdout, stderr = p.communicate()
         returncode = p.returncode
-        to_sentry.transmitter.send(FLAGS.channel, FLAGS.message, stdout, stderr, extra={'returncode': str(p.returncode)})
+        to_sentry.transmitter.send(FLAGS.channel, FLAGS.message, stdout, stderr, extra={'exit code': str(p.returncode)})
     else:
         to_sentry.transmitter.send(FLAGS.channel, FLAGS.message, stdin)
 

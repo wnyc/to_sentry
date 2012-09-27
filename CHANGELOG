@@ -24,3 +24,9 @@
       my_command -foo=bar
     * If the command is invoked by to_sentry the return code is also
       send to sentry as "returncode."
+
+0.0.6:
+    * Add --version and --version_check
+
+0.0.7:
+    * Add --ignore-stderr, --ignore-stdout and --ignore-exitcode
